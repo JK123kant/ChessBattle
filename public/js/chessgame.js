@@ -1,7 +1,5 @@
-
 const socket=io();
 const chess=new Chess();
-
 const boardElement=document.querySelector(".chessboard");
 
 let dragpiece=null;
@@ -14,7 +12,7 @@ const renderBoard=()=>{
     board.forEach((row,rowindex)=>{
         row.forEach((square,squareindex)=>{
            const squareElement= document.createElement("div");
-            squareElement.classList.add("square",(rowindex+squareindex)%2===0?"ight": "dark");
+            squareElement.classList.add("square",(rowindex+squareindex)%2===0?"light": "dark");
 
             squareElement.dataset.row=rowindex;
             squareElement.dataset.col=squareindex;
